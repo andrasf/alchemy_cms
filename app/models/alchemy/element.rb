@@ -314,7 +314,7 @@ module Alchemy
         if existing_content
           editable_contents << existing_content
         else
-          editable_contents << Content.create({element_id: id}.merge(defined_content))
+          editable_contents << Content.create({element_id: id}.merge(defined_content).symbolize_keys)
         end
       end
       editable_contents
